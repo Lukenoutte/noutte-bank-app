@@ -1,5 +1,5 @@
 <template>
-  <div class="bottom-container flex justify-center" v-if="showCardContainer">
+  <div class="bottom-container flex justify-center" v-if="showFullBalanceContainer">
       <div class="card" style="margin-top: 5%;">
 
       </div>
@@ -10,9 +10,9 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'CardContainer',
+  name: 'FullBalanceContainer',
   props: {
-    showCardContainer: { type: Boolean }
+    showFullBalanceContainer: { type: Boolean }
   }
 })
 </script>

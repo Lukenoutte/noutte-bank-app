@@ -4,47 +4,58 @@
       <q-avatar size="60px">
         <img alt="Profile" src="https://avatars.githubusercontent.com/u/32497719?v=4">
       </q-avatar>
-      <div class="q-ml-lg">
-        <p class="welcome-p">Welcome back,</p>
-        <p style="font-weight: bold;" class="welcome-p">Lucas</p>
+      <div class="q-ml-lg flex items-center">
+        <div>
+          <p class="welcome-p">Welcome back,</p>
+          <p style="font-weight: bold;" class="welcome-p">Lucas</p>
+        </div>
       </div>
 
       <div style="width: 100%;" class="q-mt-lg row">
-        <InfoBlock
+        <LittleCardInformation
         :title="'Current Balance'"
-        :value="'R$ 0'"
+        :information="'R$ 0'"
         style="margin-right: 10%;"
-        :executeOnClick="toggleShowCardContainer"
-        :blockWidth="55"/>
+        :executeOnClick="toggleShowFullBalanceContainer"
+        :cardWidthPercente="55"/>
 
-        <InfoBlock
+        <LittleCardInformation
         :title="'My Points'"
-        :value="'316'"
-        :blockWidth="35"/>
+        :information="'316'"
+        :cardWidthPercente="35"/>
       </div>
 
-      <CardContainer :showCardContainer="showCardContainer"/>
+      <div class="q-mt-lg q-gutter-md row flex justify-center full-width" v-if="!showFullBalanceContainer">
+        <IconBlock :iconName="'description'" :text="'Payment History'" />
+        <IconBlock :iconName="'paid'" :text="'Cashback'"/>
+        <IconBlock :iconName="'lightbulb'" :text="'Personal offer'"/>
+        <IconBlock :iconName="'work'" :text="'Services'"/>
+      </div>
+
+      <FullBalanceContainer :showFullBalanceContainer="showFullBalanceContainer"/>
     </div>
   </q-page>
 </template>
 
 <script>
 import { defineComponent, ref } from 'vue';
-import CardContainer from 'src/components/CardContainer.vue'
-import InfoBlock from 'src/components/InfoBlock.vue'
+import FullBalanceContainer from 'src/components/FullBalanceContainer.vue'
+import IconBlock from 'src/components/IconBlock.vue'
+import LittleCardInformation from 'src/components/LittleCardInformation.vue'
 export default defineComponent({
   name: 'PageIndex',
   components: {
-    CardContainer,
-    InfoBlock
+    FullBalanceContainer,
+    LittleCardInformation,
+    IconBlock
   },
   setup () {
-    const showCardContainer = ref(false)
+    const showFullBalanceContainer = ref(false)
 
     return {
-      showCardContainer,
-      toggleShowCardContainer () {
-        showCardContainer.value = !showCardContainer.value
+      showFullBalanceContainer,
+      toggleShowFullBalanceContainer () {
+        showFullBalanceContainer.value = !showFullBalanceContainer.value
       }
     }
   }

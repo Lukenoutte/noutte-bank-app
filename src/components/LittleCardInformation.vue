@@ -1,8 +1,8 @@
 <template>
-  <div class="info-container row q-pa-md" :style="{ width: blockWidth + '%' }" @click="executeOnClick">
+  <div class="info-container row q-pa-md" :style="{ width: cardWidthPercente + '%' }" @click="executeOnClick">
     <div>
       <p class="title"> {{ title }} </p>
-      <p class="value"> {{ value }} </p>
+      <p class="value"> {{ information }} </p>
     </div>
     <div class="row items-center full-height">
       <q-icon name="chevron_right" class="arrow-icon"/>
@@ -14,12 +14,12 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'InfoBlock',
+  name: 'LittleCardInformation',
   props: {
     title: { type: String },
-    value: { type: String },
+    information: { type: String },
     executeOnClick: { type: Function },
-    blockWidth: { type: Number }
+    cardWidthPercente: { type: Number }
   }
 })
 </script>
