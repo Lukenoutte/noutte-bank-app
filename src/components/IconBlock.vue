@@ -20,8 +20,8 @@ export default defineComponent({
 <style lang="scss" scoped>
   .block-container{
     background: $block-color-light;
-    height: 170px;
-    width: 170px;
+    height: 160px;
+    width: 48%;
     border-radius: 15px;
   }
 
@@ -37,11 +37,6 @@ export default defineComponent({
   }
 
   @media (max-width: 375px) {
-    .block-container{
-      height: 120px;
-      width: 120px;
-    }
-
     .description-text{
       font-size: 0.8em;
     }

@@ -1,40 +1,64 @@
 <template>
-  <div class="bottom-container flex justify-center" v-if="showFullBalanceContainer">
-      <div class="card" style="margin-top: 5%;">
-
+  <div class="bottom-container flex justify-center q-mt-lg q-pb-lg q-pa-md">
+      <div class="card q-pa-lg">
+        <p class="title-p">Balance</p>
+        <p class="value-p">600,00</p>
+        <p class="updated-at">Updated today at 14:05</p>
+      </div>
+      <div class="q-my-md row flex justify-center full-width">
+        <IconBlock :iconName="'description'" :text="'Payment History'"/>
+        <IconBlock :iconName="'paid'" :text="'Cashback'" class="q-ml-auto"/>
+        <IconBlock :iconName="'lightbulb'" :text="'Personal offer'" class="q-mt-md"/>
+        <IconBlock :iconName="'work'" :text="'Services'" class="q-ml-auto q-mt-md"/>
       </div>
    </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-
+import IconBlock from 'src/components/IconBlock.vue'
 export default defineComponent({
   name: 'FullBalanceContainer',
-  props: {
-    showFullBalanceContainer: { type: Boolean }
-  }
+  components: {
+    IconBlock
+  },
 })
 </script>
 
 <style lang="scss" scoped>
   .bottom-container{
-    height: 60%;
+    height: 100%;
     width: 100%;
     background: $background-secondary;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
 
   .card {
-    width: 92%;
+    width: 100%;
     height: 200px;
     background: $primary;
     border-radius: 20px;
+    position: relative;
   }
+
+  .title-p {
+    color: white;
+  }
+
+  .updated-at {
+    color: white;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .value-p {
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+  }
+
   @media (max-width: 330px) {
     .bottom-container{
       height: 50%;
