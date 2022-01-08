@@ -1,10 +1,12 @@
 <template>
   <div class="bottom-container flex justify-center q-mt-lg q-pb-lg q-pa-md">
-      <div class="card q-pa-lg">
-        <p class="title-p">Balance</p>
-        <p class="value-p">600,00</p>
-        <p class="updated-at">Updated today at 14:05</p>
-      </div>
+      <q-btn unelevated no-caps align="left" class="card q-pa-lg" :ripple="{ color: 'white' }">
+        <div class="column text-left">
+          <p class="title-p">Balance</p>
+          <p class="value-p">600,00</p>
+          <p class="updated-at">Updated today at 14:05</p>
+        </div>
+      </q-btn>
       <div class="q-my-md row flex justify-center full-width">
         <IconBlock :iconName="'description'" :text="'Payment History'"/>
         <IconBlock :iconName="'paid'" :text="'Cashback'" class="q-ml-auto"/>
@@ -44,6 +46,8 @@ export default defineComponent({
 
   .title-p {
     color: white;
+    position: absolute;
+    top: 10%;
   }
 
   .updated-at {

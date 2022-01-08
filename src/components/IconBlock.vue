@@ -1,8 +1,10 @@
 <template>
-  <div class="block-container flex justify-center items-center column">
-    <q-icon :name="iconName" class="main-icon"/>
-    <p class="description-text">{{ text }}</p>
-  </div>
+  <q-btn :ripple="{ color: 'primary' }" unelevated no-caps class="block-container">
+    <div class="flex justify-center items-center column">
+     <q-icon :name="iconName" class="main-icon"/>
+     <p class="description-text">{{ text }}</p>
+    </div>
+  </q-btn>
 </template>
 
 <script>

@@ -3,6 +3,7 @@
     <Header/>
     <q-page-container class="bg-color flex justify-center">
       <div class="screen-size">
+        <q-btn>Back</q-btn>
         <router-view />
       </div>
     </q-page-container>
@@ -14,7 +15,7 @@
 import { defineComponent, ref } from 'vue'
 import Header from 'src/components/Header.vue'
 export default defineComponent({
-  name: 'MainLayout',
+  name: 'SecondaryLayout',
   components: {
     Header
   }
