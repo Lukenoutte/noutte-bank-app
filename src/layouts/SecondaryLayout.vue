@@ -1,18 +1,23 @@
 <template>
-  <q-layout view="lHr lpr lfr">
-    <Header/>
-    <q-page-container class="bg-color">
-      <div class="row q-px-md q-mt-md flex items-center">
-        <button @click="backToIndex" class="button-back">
-          <q-icon name="chevron_left" class="icon-button-back"/>
-        </button>
-        <span class="q-ml-md screen-title">{{ route.meta.title }}</span>
-      </div>
-      <div class="bottom-container q-mt-lg q-pa-md">
-        <router-view />
-      </div>
-    </q-page-container>
-  </q-layout>
+  <transition
+    appear
+    enter-active-class="animated slideInRight"
+  >
+    <q-layout view="lHr lpr lfr">
+      <Header/>
+      <q-page-container class="bg-color">
+        <div class="row q-px-md q-mt-md flex items-center">
+          <button @click="backToIndex" class="button-back">
+            <q-icon name="chevron_left" class="icon-button-back"/>
+          </button>
+          <span class="q-ml-md screen-title">{{ route.meta.title }}</span>
+        </div>
+        <div class="bottom-container q-mt-lg q-pa-md">
+          <router-view />
+        </div>
+      </q-page-container>
+    </q-layout>
+  </transition>
 </template>
 
 <script>
