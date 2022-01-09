@@ -11,7 +11,7 @@ const routes = [
     path: '/details',
     component: () => import('layouts/SecondaryLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', meta: { title: 'Account Replenishment' }, component: () => import('pages/AccountReplenishment.vue') }
     ]
   },
 

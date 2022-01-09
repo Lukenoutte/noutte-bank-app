@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHr lpr lfr">
+  <q-layout view="lhr lpr lfr">
     <Header/>
     <q-page-container class="bg-color flex justify-center">
       <div class="screen-size">
