@@ -1,12 +1,17 @@
 <template>
-  <q-layout view="lhr lpr lfr">
-    <Header/>
-    <q-page-container class="bg-color flex justify-center">
-      <div class="screen-size">
-        <router-view />
-      </div>
-    </q-page-container>
-  </q-layout>
+  <transition
+    appear
+    enter-active-class="animated slideInLeft"
+  >
+    <q-layout view="lhr lpr lfr">
+      <Header/>
+      <q-page-container class="bg-color flex justify-center">
+        <div class="screen-size">
+          <router-view />
+        </div>
+      </q-page-container>
+    </q-layout>
+  </transition>
 </template>
 
 <script>
