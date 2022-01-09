@@ -9,7 +9,7 @@
 <script>
 import { defineComponent } from 'vue';
 export default defineComponent({
-  name: 'AccountReplenishment',
+  name: 'PaymentHistory',
   setup () {
     return {
     }

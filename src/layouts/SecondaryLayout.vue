@@ -3,7 +3,7 @@
     <Header/>
     <q-page-container class="bg-color">
       <div class="row q-px-md q-mt-md flex items-center">
-        <button class="button-back">
+        <button @click="backToIndex" class="button-back">
           <q-icon name="chevron_left" class="icon-button-back"/>
         </button>
         <span class="q-ml-md screen-title">{{ route.meta.title }}</span>
@@ -19,7 +19,7 @@
 
 import { defineComponent } from 'vue'
 import Header from 'src/components/Header.vue'
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 export default defineComponent({
   name: 'SecondaryLayout',
   components: {
@@ -27,7 +27,13 @@ export default defineComponent({
   },
   setup () {
     const route = useRoute();
-    return { route }
+    const router = useRouter();
+
+    const backToIndex = () => {
+      router.back();
+    }
+
+    return { route, backToIndex }
   }
 })
 </script>

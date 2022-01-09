@@ -8,7 +8,7 @@
         </div>
       </q-btn>
       <div class="q-my-md row flex justify-center full-width">
-        <IconBlock :iconName="'description'" :text="'Payment History'"/>
+        <IconBlock :iconName="'description'" :text="'Payment History'" :routeName="'payment-history'" />
         <IconBlock :iconName="'paid'" :text="'Cashback'" class="q-ml-auto"/>
         <IconBlock :iconName="'lightbulb'" :text="'Personal offer'" class="q-mt-md"/>
         <IconBlock :iconName="'work'" :text="'Services'" class="q-ml-auto q-mt-md"/>
@@ -23,7 +23,7 @@ export default defineComponent({
   name: 'FullBalanceContainer',
   components: {
     IconBlock
-  },
+  }
 })
 </script>
 

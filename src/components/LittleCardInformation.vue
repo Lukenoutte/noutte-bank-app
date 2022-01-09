@@ -1,5 +1,5 @@
 <template>
-  <div class="info-container row q-pa-md" :style="{ width: cardWidthPercente + '%' }" @click="executeOnClick">
+  <div class="info-container row q-pa-md" :style="{ width: cardWidthPercente + '%' }">
     <div>
       <p class="title"> {{ title }} </p>
       <p class="value"> {{ information }} </p>
@@ -18,7 +18,6 @@ export default defineComponent({
   props: {
     title: { type: String },
     information: { type: String },
-    executeOnClick: { type: Function },
     cardWidthPercente: { type: Number }
   }
 })
