@@ -1,10 +1,10 @@
 <template>
-    <q-btn :ripple="{ color: 'primary' }" unelevated no-caps class="block-container" @click="pushToRoute(routeName)">
+    <button class="block-container" @click="pushToRoute(routeName)">
       <div class="flex justify-center items-center column">
       <q-icon :name="iconName" class="main-icon"/>
       <p class="description-text">{{ text }}</p>
       </div>
-    </q-btn>
+    </button>
 </template>
 
 <script>
@@ -35,6 +35,7 @@ export default defineComponent({
     height: 160px;
     width: 48%;
     border-radius: 15px;
+    border: 0;
   }
 
   .main-icon{

@@ -17,6 +17,10 @@ body {
           user-select: none;
 }
 
+.max-screen-size{
+  max-width: 540px;
+}
+
 @media (max-width: 330px) {
   body,
   input,

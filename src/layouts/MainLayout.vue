@@ -6,7 +6,7 @@
     <q-layout view="lhr lpr lfr">
       <Header/>
       <q-page-container class="bg-color flex justify-center">
-        <div class="screen-size">
+        <div class="max-screen-size">
           <router-view />
         </div>
       </q-page-container>
@@ -29,8 +29,5 @@ export default defineComponent({
 <style lang="scss" scoped>
   .bg-color {
       background: $background;
-  }
-  .screen-size{
-    max-width: 540px;
   }
 </style>
