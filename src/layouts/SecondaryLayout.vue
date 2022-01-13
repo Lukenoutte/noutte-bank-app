@@ -6,14 +6,18 @@
     <q-layout view="lHr lpr lfr">
       <Header/>
       <q-page-container class="bg-color">
-        <div class="row q-px-md q-mt-md flex items-center">
-          <button @click="backToIndex" class="button-back">
-            <q-icon name="chevron_left" class="icon-button-back"/>
-          </button>
-          <span class="q-ml-md screen-title">{{ route.meta.title }}</span>
-        </div>
-        <div class="bottom-container q-mt-lg q-pa-lg">
-          <router-view />
+        <div class="full-width flex justify-center">
+          <div class="max-screen-size full-width">
+            <div class="row q-px-md q-mt-md flex items-center">
+              <button @click="backToIndex" class="button-back">
+                <q-icon name="chevron_left" class="icon-button-back"/>
+              </button>
+              <span class="q-ml-md screen-title">{{ route.meta.title }}</span>
+            </div>
+            <div class="bottom-container q-mt-lg q-pa-xl">
+              <router-view />
+            </div>
+          </div>
         </div>
       </q-page-container>
     </q-layout>
@@ -44,7 +48,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-  .button-back{
+  .button-back {
     border: 1px solid $primary;
     border-radius: 10px;
     width: 30px;
@@ -63,11 +67,12 @@ export default defineComponent({
     font-size: 1.2em;
   }
 
-  .bottom-container{
+  .bottom-container {
     height: 100%;
     width: 100%;
     background: $background-secondary;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
+
 </style>
