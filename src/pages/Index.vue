@@ -13,31 +13,31 @@
         </div>
       </div>
       <div style="width: 100%;" class="q-mt-lg row">
-        <LittleCardInformation
+        <IndexCardInformation
         :title="'Current Balance'"
         :information="'R$ 600,00'"
         style="margin-right: 5%;"
         :cardWidthPercente="55"/>
 
-        <LittleCardInformation
+        <IndexCardInformation
         :title="'My Points'"
         :information="'316'"
         :cardWidthPercente="40"/>
       </div>
     </div>
-    <FullBalanceContainer/>
+    <IndexBalanceContainer/>
   </q-page>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
-import FullBalanceContainer from 'src/components/FullBalanceContainer.vue'
-import LittleCardInformation from 'src/components/LittleCardInformation.vue'
+import { defineComponent } from 'vue';
+import IndexBalanceContainer from 'src/components/IndexBalanceContainer.vue'
+import IndexCardInformation from 'src/components/IndexCardInformation.vue'
 export default defineComponent({
   name: 'PageIndex',
   components: {
-    FullBalanceContainer,
-    LittleCardInformation
+    IndexBalanceContainer,
+    IndexCardInformation
   },
   setup () {
     return {

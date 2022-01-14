@@ -4,7 +4,7 @@
     enter-active-class="animated slideInRight"
   >
     <q-layout view="lHr lpr lfr">
-      <Header/>
+      <TheHeader/>
       <q-page-container class="bg-color">
         <div class="full-width flex justify-center">
           <div class="max-screen-size full-width">
@@ -27,12 +27,12 @@
 <script>
 
 import { defineComponent } from 'vue'
-import Header from 'src/components/Header.vue'
+import TheHeader from 'src/components/TheHeader.vue'
 import { useRoute, useRouter } from 'vue-router';
 export default defineComponent({
   name: 'SecondaryLayout',
   components: {
-    Header
+    TheHeader
   },
   setup () {
     const route = useRoute();

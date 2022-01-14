@@ -5,7 +5,7 @@
       <p class="value"> {{ information }} </p>
     </div>
     <div class="row items-center full-height">
-      <q-icon name="chevron_right" class="arrow-icon"/>
+      <q-icon name="chevron_right" class="arrow-icon primary-color"/>
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'LittleCardInformation',
+  name: 'IndexCardInformation',
   props: {
     title: { type: String },
     information: { type: String },
@@ -44,7 +44,6 @@ export default defineComponent({
   }
 
   .arrow-icon{
-    color: $primary;
     font-size: 2em;
     position: absolute;
     right: 3px;

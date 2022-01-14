@@ -1,8 +1,8 @@
 <template>
     <button class="block-container" @click="pushToRoute(routeName)">
       <div class="flex justify-center items-center column">
-      <q-icon :name="iconName" class="main-icon"/>
-      <p class="description-text">{{ text }}</p>
+      <q-icon :name="iconName" class="main-icon primary-color" style="font-size: 3em;"/>
+      <p class="description-text primary-color">{{ text }}</p>
       </div>
     </button>
 </template>
@@ -11,7 +11,7 @@
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 export default defineComponent({
-  name: 'LittleCardInformation',
+  name: 'IndexBlockButton',
   props: {
     text: { type: String },
     iconName: { type: String },
@@ -38,13 +38,7 @@ export default defineComponent({
     border: 0;
   }
 
-  .main-icon{
-    color: $primary;
-    font-size: 3em;
-  }
-
   .description-text{
-    color: $primary;
     font-size: 1em;
     margin-top: 10%;
   }

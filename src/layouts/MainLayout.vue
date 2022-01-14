@@ -4,7 +4,7 @@
     enter-active-class="animated slideInLeft"
   >
     <q-layout view="lhr lpr lfr">
-      <Header/>
+      <TheHeader/>
       <q-page-container class="bg-color flex justify-center">
         <div class="max-screen-size">
           <router-view />
@@ -17,11 +17,11 @@
 <script>
 
 import { defineComponent, ref } from 'vue'
-import Header from 'src/components/Header.vue'
+import TheHeader from 'src/components/TheHeader.vue'
 export default defineComponent({
   name: 'MainLayout',
   components: {
-    Header
+    TheHeader
   }
 })
 </script>

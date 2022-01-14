@@ -8,21 +8,21 @@
         </div>
       </q-btn>
       <div class="q-my-md row flex justify-center full-width">
-        <IconBlock transition-show="slide-right" :iconName="'description'" :text="'Payment History'" :routeName="'payment-history'" />
-        <IconBlock :iconName="'paid'" :text="'Cashback'" class="q-ml-auto"/>
-        <IconBlock :iconName="'lightbulb'" :text="'Personal offer'" class="q-mt-md"/>
-        <IconBlock :iconName="'work'" :text="'Services'" class="q-ml-auto q-mt-md"/>
+        <IndexBlockButton transition-show="slide-right" :iconName="'description'" :text="'Payment History'" :routeName="'payment-history'" />
+        <IndexBlockButton :iconName="'paid'" :text="'Cashback'" class="q-ml-auto"/>
+        <IndexBlockButton :iconName="'lightbulb'" :text="'Personal offer'" class="q-mt-md"/>
+        <IndexBlockButton :iconName="'work'" :text="'Services'" class="q-ml-auto q-mt-md"/>
       </div>
    </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import IconBlock from 'src/components/IconBlock.vue'
+import IndexBlockButton from 'src/components/IndexBlockButton.vue'
 export default defineComponent({
   name: 'FullBalanceContainer',
   components: {
-    IconBlock
+    IndexBlockButton
   }
 })
 </script>
@@ -67,7 +67,6 @@ export default defineComponent({
     .bottom-container{
       height: 50%;
     }
-
   }
 
 </style>

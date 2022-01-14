@@ -21,6 +21,10 @@ body {
   max-width: 540px;
 }
 
+.primary-color{
+  color: $primary;
+}
+
 @media (max-width: 330px) {
   body,
   input,

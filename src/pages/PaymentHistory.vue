@@ -29,8 +29,11 @@ export default defineComponent({
   setup () {
     return {
     }
+  },
+  components: {
+    Carousel,
+    Slide
   }
-
 })
 </script>
 
