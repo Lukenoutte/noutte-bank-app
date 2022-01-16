@@ -18,6 +18,7 @@
         </button>
         <q-icon name="help_outline" class="icon"/>
       </div>
+      <button class="full-button"> Pay </button>
     </div>
   </q-page>
 </template>
@@ -31,8 +32,6 @@ export default defineComponent({
     }
   },
   components: {
-    Carousel,
-    Slide
   }
 })
 </script>
@@ -52,7 +51,7 @@ export default defineComponent({
    .phone-number{
      color: white;
      font-size: 1.5em;
-     font-weight: 300;
+     font-weight: 500;
    }
 
    .person-icon{
@@ -88,5 +87,17 @@ export default defineComponent({
   .icon{
     color: $primary;
     font-size: 1.7em;
+  }
+
+  .full-button {
+    background: $primary;
+    border-radius: 15px;
+    width: 100%;
+    border: 0;
+    height: 70px;
+    margin-top: 40px;
+    font-size: 1.3em;
+    color: $background;
+    font-weight: 600;
   }
 </style>

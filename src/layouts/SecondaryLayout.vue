@@ -14,7 +14,7 @@
               </button>
               <span class="q-ml-md screen-title">{{ route.meta.title }}</span>
             </div>
-            <div class="bottom-container q-mt-lg q-pa-xl">
+            <div class="bottom-container q-mt-lg q-pa-lg">
               <router-view />
             </div>
           </div>

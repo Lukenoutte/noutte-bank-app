@@ -1,10 +1,14 @@
 <template>
-  <div class="bottom-container flex justify-center q-mt-lg q-pb-lg q-pa-md">
+  <div class="bottom-container flex justify-center q-mt-lg q-pb-lg q-pa-md main-container">
       <q-btn unelevated no-caps align="left" class="card q-pa-lg" :ripple="{ color: 'white' }">
         <div class="column text-left">
           <p class="title-p">Balance</p>
           <p class="value-p">600,00</p>
           <p class="updated-at">Updated today at 14:05</p>
+        <div class="full-height icon-card-container column">
+          <q-icon name="add" class="card-icon"/>
+          <q-icon style="margin-top: 40px;" name="refresh" class="card-icon"/>
+        </div>
         </div>
       </q-btn>
       <div class="q-my-md row flex justify-center full-width">
@@ -52,7 +56,7 @@ export default defineComponent({
 
   .updated-at {
     color: white;
-    font-size: 0.8em;
+    font-size: 0.9em;
     position: absolute;
     bottom: 0;
   }
@@ -63,10 +67,25 @@ export default defineComponent({
     font-weight: bold;
   }
 
+  .icon-card-container{
+    position: absolute;
+    right: 5%;
+  }
+
+  .main-container{
+    position: relative;
+  }
+
+  .card-icon{
+    color: white;
+    font-size: 2.2em;
+  }
+
   @media (max-width: 330px) {
     .bottom-container{
       height: 50%;
     }
   }
+
 
 </style>
