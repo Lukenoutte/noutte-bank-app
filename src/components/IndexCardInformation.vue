@@ -4,7 +4,7 @@
       <p class="title"> {{ title }} </p>
       <p class="value"> {{ information }} </p>
     </div>
-    <div class="row items-center full-height">
+    <div class="row items-center">
       <q-icon name="chevron_right" class="arrow-icon primary-color"/>
     </div>
   </div>

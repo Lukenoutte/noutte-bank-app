@@ -14,14 +14,14 @@
       </div>
       <div style="width: 100%;" class="q-mt-lg row">
         <IndexCardInformation
-        :title="'Current Balance'"
-        :information="'R$ 600,00'"
+        title="Current Balance"
+        information="R$ 600,00"
         style="margin-right: 5%;"
         :cardWidthPercente="55"/>
 
         <IndexCardInformation
-        :title="'My Points'"
-        :information="'316'"
+        title="My Points"
+        information="316"
         :cardWidthPercente="40"/>
       </div>
     </div>

@@ -12,19 +12,17 @@
         <div class="middle-line"></div>
       </div>
       <div class="q-mt-xl justify-between row flex items-center">
-        <button class="button-outline flex items-center">
-          <span class="span-on-button">Promissed payment</span>
-          <q-icon name="chevron_right" class="arrow-icon icon"/>
-        </button>
+        <ButtonNoBackground text="Promissed payment" />
         <q-icon name="help_outline" class="icon"/>
       </div>
-      <button class="full-button"> Pay </button>
+      <q-btn no-caps :ripple="{ color: 'white' }" class="full-button"> Pay </q-btn>
     </div>
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import ButtonNoBackground from 'src/components/ButtonNoBackground.vue'
 export default defineComponent({
   name: 'PaymentHistory',
   setup () {
@@ -32,11 +30,13 @@ export default defineComponent({
     }
   },
   components: {
+    ButtonNoBackground
   }
 })
 </script>
 
 <style lang="scss" scoped>
+
   .sub-title {
     color: $subtitle;
     font-size: 1.2em;
@@ -63,26 +63,6 @@ export default defineComponent({
      border-bottom: 1px solid $subtitle;
      width: 60%;
    }
-
-   .button-outline {
-     border: 1px solid $primary;
-     background: transparent;
-     color: white;
-     height: 70px;
-     width: 210px;
-     border-radius: 15px;
-     position: relative;
-   }
-
-   .span-on-button {
-    position: absolute;
-    left: 15px;
-   }
-
-  .arrow-icon{
-    position: absolute;
-    right: 10px;
-  }
 
   .icon{
     color: $primary;

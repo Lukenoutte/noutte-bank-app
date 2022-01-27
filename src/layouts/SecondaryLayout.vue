@@ -3,12 +3,12 @@
     appear
     enter-active-class="animated slideInRight"
   >
-    <q-layout view="lHr lpr lfr">
+    <q-layout view="lHr lpr lfr" style="min-height: initial;">
       <TheHeader/>
-      <q-page-container class="bg-color">
+      <q-page-container class="bg-color" :class="{ 'full-screen-height': route.meta.fullHeight }">
         <div class="full-width flex justify-center">
           <div class="max-screen-size full-width">
-            <div class="row q-px-md q-mt-md flex items-center">
+            <div class="row top-container q-mt-md flex items-center">
               <button @click="backToIndex" class="button-back">
                 <q-icon name="chevron_left" class="icon-button-back"/>
               </button>
@@ -48,6 +48,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
+  .top-container{
+    margin-left: 10px;
+  }
+
+  .full-screen-height {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .button-back {
     border: 1px solid $primary;
     border-radius: 10px;
@@ -68,7 +78,6 @@ export default defineComponent({
   }
 
   .bottom-container {
-    height: 100%;
     width: 100%;
     background: $background-secondary;
     border-top-left-radius: 20px;

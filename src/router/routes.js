@@ -11,7 +11,8 @@ const routes = [
     path: '/details',
     component: () => import('layouts/SecondaryLayout.vue'),
     children: [
-      { path: 'payment-history', meta: { title: 'Payment History' }, component: () => import('src/pages/PaymentHistory.vue') }
+      { path: 'payment-history', meta: { title: 'Payment History', fullHeight: true }, component: () => import('src/pages/PaymentHistory.vue') },
+      { path: 'services', meta: { title: 'Services', fullHeight: true }, component: () => import('src/pages/Services.vue') }
     ]
   },
 
