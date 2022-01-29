@@ -1,8 +1,8 @@
 <template>
-    <q-btn no-caps :ripple="{ color: 'primary' }" class="block-container" @click="pushToRoute(routeName)">
+    <q-btn unelevated no-caps :ripple="{ color: 'primary' }" class="block-container" @click="pushToRoute(routeName)">
       <div class="flex justify-center items-center column full-width">
         <div class="cicle-icon">
-          <q-icon :name="iconName" class="main-icon primary-color" style="font-size: 3em;"/>
+          <q-icon :name="iconName" class="main-icon primary-color" style="font-size: 2.5em;"/>
         </div>
         <p class="description-text">{{ text }}</p>
       </div>
@@ -33,6 +33,7 @@ export default defineComponent({
     font-size: 1em;
     margin-top: 8%;
     color: $block-title;
+    margin-bottom: 0;
   }
 
   .cicle-icon {

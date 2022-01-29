@@ -2,7 +2,8 @@
   <div class="info-container row q-pa-md" :style="{ width: cardWidthPercente + '%' }">
     <div>
       <p class="title"> {{ title }} </p>
-      <p class="value"> {{ information }} </p>
+      <q-skeleton v-if="isLoading" type="rect" width="70%"/>
+      <p class="value" v-else> {{ information }} </p>
     </div>
     <div class="row items-center">
       <q-icon name="chevron_right" class="arrow-icon primary-color"/>
@@ -18,7 +19,8 @@ export default defineComponent({
   props: {
     title: { type: String },
     information: { type: String },
-    cardWidthPercente: { type: Number }
+    cardWidthPercente: { type: Number },
+    isLoading: { type: Boolean }
   }
 })
 </script>

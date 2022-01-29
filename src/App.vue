@@ -3,8 +3,12 @@
 </template>
 <script>
 import { defineComponent } from 'vue';
-
+import { useQuasar } from 'quasar'
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  setup () {
+    const $q = useQuasar()
+    $q.addressbarColor.set('#03d787')
+  }
 })
 </script>

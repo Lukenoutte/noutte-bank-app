@@ -12,9 +12,9 @@
         </div>
       </q-btn>
       <div class="q-my-md row flex justify-center full-width">
-        <IndexBlockButton transition-show="slide-right" iconName="description" text="Payment History" routeName="payment-history" />
-        <IndexBlockButton iconName="paid" text="Cashback" class="q-ml-auto"/>
-        <IndexBlockButton iconName="lightbulb" text="Personal offer" class="q-mt-md"/>
+        <IndexBlockButton transition-show="slide-right" iconName="description" text="Payment" routeName="payment-history" />
+        <IndexBlockButton iconName="paid" text="Cashback" class="q-ml-auto" routeName="cashback"/>
+        <IndexBlockButton iconName="lightbulb" text="Personal offer" class="q-mt-md" routeName="personal-offer"/>
         <IndexBlockButton iconName="work" text="Services" class="q-ml-auto q-mt-md" routeName="services"/>
       </div>
    </div>
@@ -79,6 +79,7 @@ export default defineComponent({
     color: white;
     font-size: 2.2em;
   }
+
 
   @media (max-width: 330px) {
     .bottom-container{

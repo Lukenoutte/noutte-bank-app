@@ -45,7 +45,7 @@ export default defineComponent({
 
   @media (max-width: 375px) {
     .description-text{
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
 
   }

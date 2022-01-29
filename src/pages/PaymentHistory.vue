@@ -2,7 +2,7 @@
   <q-page>
     <div class="full-width">
       <p class="sub-title"> Payment amount </p>
-      <span class="value-span"> 600,00 </span>
+      <span class="value-span"> 320,00 </span>
       <p class="sub-title"> Tel. nomber </p>
       <div class="row flex justify-between">
         <span class="phone-number"> +55 75 9 91546454 </span>
