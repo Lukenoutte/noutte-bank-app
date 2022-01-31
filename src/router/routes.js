@@ -11,7 +11,7 @@ const routes = [
     path: '/details',
     component: () => import('layouts/SecondaryLayout.vue'),
     children: [
-      { path: 'payment-history', meta: { title: 'Payment History', fullHeight: true }, component: () => import('src/pages/PaymentHistory.vue') },
+      { path: 'payment', meta: { title: 'Payment', fullHeight: true }, component: () => import('src/pages/Payment.vue') },
       { path: 'services', meta: { title: 'Services', fullHeight: true }, component: () => import('src/pages/Services.vue') },
       { path: 'cashback', meta: { title: 'Cashback', fullHeight: true }, component: () => import('src/pages/Cashback.vue') },
       { path: 'personal-offer', meta: { title: 'Personal Offer', fullHeight: true }, component: () => import('src/pages/PersonalOffer.vue') }

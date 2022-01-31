@@ -36,7 +36,7 @@
         />
       </div>
     </div>
-    <IndexBalanceContainer/>
+    <IndexBalanceContainer :isLoading="isLoading" />
   </q-page>
 </template>
 
@@ -52,12 +52,9 @@ export default defineComponent({
   },
   setup () {
     const isLoading = ref(true)
-
-    onMounted(() => {
-      setInterval(() => { // Fake loading
-        isLoading.value = false
-      }, 1000)
-    })
+    setInterval(() => { // Fake loading
+      isLoading.value = false
+    }, 1000)
 
     return {
       isLoading

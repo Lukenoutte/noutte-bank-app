@@ -25,6 +25,14 @@ body {
   color: $primary;
 }
 
+.q-skeleton-changed {
+  background: rgba(255, 247, 247, 0.336);
+}
+
+.q-skeleton-changed:after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.308), rgba(255, 255, 255, 0))!important;
+}
+
 @media (max-width: 330px) {
   body,
   input,

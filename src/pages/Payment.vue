@@ -3,7 +3,7 @@
     <div class="full-width">
       <p class="sub-title"> Payment amount </p>
       <span class="value-span"> 320,00 </span>
-      <p class="sub-title"> Tel. nomber </p>
+      <p class="sub-title"> Tel. number </p>
       <div class="row flex justify-between">
         <span class="phone-number"> +55 75 9 91546454 </span>
         <q-icon name="person" class="person-icon"/>
@@ -24,7 +24,7 @@
 import { defineComponent } from 'vue';
 import ButtonNoBackground from 'src/components/ButtonNoBackground.vue'
 export default defineComponent({
-  name: 'PaymentHistory',
+  name: 'Payment',
   setup () {
     return {
     }

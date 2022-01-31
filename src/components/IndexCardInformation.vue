@@ -49,5 +49,6 @@ export default defineComponent({
     font-size: 2em;
     position: absolute;
     right: 3px;
+    top: 38%;
   }
 </style>
